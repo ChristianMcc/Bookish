@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{955FDED7-6751-44F3-9D64-9A55687130D3}</ProjectGuid>
+    <ProjectGuid>{1206D587-E36F-4BD7-ADEB-4F39EF3F9303}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Bookish</RootNamespace>
-    <AssemblyName>Bookish</AssemblyName>
+    <RootNamespace>Bookish.ConsoleApp</RootNamespace>
+    <AssemblyName>Bookish.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,6 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bookish.DataAccess\Bookish.DataAccess.csproj">
+      <Project>{8B496C50-0863-4141-9F8A-77F5D4707F9D}</Project>
+      <Name>Bookish.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

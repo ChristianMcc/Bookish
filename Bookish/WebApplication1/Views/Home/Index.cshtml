@@ -1,0 +1,30 @@
+﻿@using System.Web.UI.WebControls
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>All the books</h1>
+    <p class="lead">We've got about 3 classics</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Log in or register for an account!</h2>
+        <p>Look in the top right, click the register button, do some stuff</p>
+
+    </div>
+    <div class="col-md-4">
+        <h2>Click here to browse the library of many books</h2>
+        <form action="/TheLibrary">
+            <button type="button">booksbooksbooks</button>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>Click here to see your books</h2>
+        <form action="/YourBooks">
+            <button type="button">mm books</button>
+        </form>
+    </div>
+
+</div>
